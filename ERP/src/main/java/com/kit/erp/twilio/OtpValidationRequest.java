@@ -22,6 +22,16 @@ public class OtpValidationRequest {
 	public void setOtpNumber(String otpNumber) {
 		this.otpNumber = otpNumber;
 	}
+	public OtpValidationRequest(@NotNull String username,
+			@Size(min = 6, max = 6, message = "OTP must contain 6 digits") @Pattern(regexp = "^\\d+$", message = "OTP must only contain digits") String otpNumber) {
+		super();
+		this.username = username;
+		this.otpNumber = otpNumber;
+	}
+	public OtpValidationRequest() {
+		super();
+	}
+	
 	
 	
 }

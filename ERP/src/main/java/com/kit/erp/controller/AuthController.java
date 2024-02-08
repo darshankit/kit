@@ -176,7 +176,7 @@ public class AuthController {
 		emailOtpService.saveOtp(e);
 
 		// Here you would save the OTP and associated email to your database
-		// For simplicity, we're just returning the OTP
+		
 		return otp;
 	}
 

@@ -41,4 +41,16 @@ public class EmailOtp {
 		this.otp = otp;
 	}
 
+	public EmailOtp(String email, String otp, Date expirationTime) {
+		super();
+		this.email = email;
+		this.otp = otp;
+		this.expirationTime = expirationTime;
+	}
+
+	public EmailOtp() {
+		super();
+	}
+
+	
 }

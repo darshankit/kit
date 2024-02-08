@@ -22,6 +22,16 @@ public class EmailOtpRequest {
 	public void setOtp(String otp) {
 		this.otp = otp;
 	}
+	public EmailOtpRequest(
+			@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "invalid mail") String email,
+			@Size(min = 6, max = 6, message = "OTP must contain 6 digits") @Pattern(regexp = "^\\d+$", message = "OTP must only contain digits") String otp) {
+		super();
+		this.email = email;
+		this.otp = otp;
+	}
+	public EmailOtpRequest() {
+		super();
+	}
 	
 	
 }
