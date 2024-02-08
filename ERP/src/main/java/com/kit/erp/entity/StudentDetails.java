@@ -33,7 +33,7 @@ public class StudentDetails implements UserDetails{
 	@NotNull(message = "parents name cannot be null")
 	@Pattern(regexp = "^[a-zA-Z]+$", message = "Parents Name should contain only alphabets")
 	private String parentsName;
-	@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message="invalid mail")
+
 	private String email;
 	@Pattern(regexp = "^(?=.*\\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$",message = "password should contain Minimum 8 characters, at least one uppercase letter, one lowercase letter, one digit, and one special character")
 	private String password;

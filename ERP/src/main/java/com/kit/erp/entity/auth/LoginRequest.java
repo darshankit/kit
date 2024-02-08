@@ -21,5 +21,15 @@ public class LoginRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public LoginRequest(
+			@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "invalid mail") String email,
+			@Size(min = 6, max = 20, message = "Password requirement not matching") String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
+	public LoginRequest() {
+		super();
+	}
 	
 }
